@@ -1,0 +1,35 @@
+<TeeConfig>
+  <ProjectConfig>
+    <config feature="MTK_TEE_SUPPORT" value="no" />
+    <config feature="MICROTRUST_TEE_SUPPORT" value="no" />
+    <config feature="MTK_ATF_SUPPORT" value="yes" />
+  </ProjectConfig>
+  <TrustzoneConfig>
+    <config feature="MTK_TEE_SUPPORT" value="no" />
+    <config feature="MICROTRUST_TEE_SUPPORT" value="no" />
+    <config feature="MTK_ATF_SUPPORT" value="yes" />
+  </TrustzoneConfig>
+  <LKConfig>
+    <config feature="MICROTRUST_TEE_SUPPORT" value="no" />
+  </LKConfig>
+  <PreloadConfig>
+    <config feature="MTK_TEE_SUPPORT" value="no" />
+    <config feature="MICROTRUST_TEE_SUPPORT" value="no" />
+  </PreloadConfig>
+  <KernelConfig>
+    <config feature="CONFIG_TEE" value="is not set" />
+    <config feature="CONFIG_MICROTRUST_TEE_SUPPORT" value="is not set" />
+  </KernelConfig>
+  <KernelDebugConfig>
+    <config feature="CONFIG_TEE" value="is not set" />
+    <config feature="CONFIG_MICROTRUST_TEE_SUPPORT" value="is not set" />
+  </KernelDebugConfig>
+  <KernelV1Config>
+    <config feature="CONFIG_TEE" value="is not set" />
+    <config feature="CONFIG_MICROTRUST_TEE_SUPPORT" value="is not set" />
+  </KernelV1Config>
+  <KernelV1DebugConfig>/>
+    <config feature="CONFIG_TEE" value="is not set" />
+    <config feature="CONFIG_MICROTRUST_TEE_SUPPORT" value="is not set" />
+  </KernelV1DebugConfig>
+</TeeConfig>

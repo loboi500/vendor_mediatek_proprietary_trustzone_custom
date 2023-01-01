@@ -1,0 +1,24 @@
+<GenieZoneConfig>
+  <ProjectConfig>
+    <config feature="MTK_GZ_SUPPORT_SDSP" value="yes" />
+  </ProjectConfig>
+  <TrustzoneConfig>
+  </TrustzoneConfig>
+  <LKConfig>
+  </LKConfig>
+  <PreloadConfig>
+    <config feature="MTK_GZ_SUPPORT_SDSP" value="yes" />
+  </PreloadConfig>
+  <KernelConfig>
+    <config feature="CONFIG_MTK_GZ_SUPPORT_SDSP" value="y" />
+  </KernelConfig>
+  <KernelDebugConfig>
+    <config feature="CONFIG_MTK_GZ_SUPPORT_SDSP" value="y" />
+  </KernelDebugConfig>
+  <KernelV2Config>
+    <config feature="CONFIG_MTK_GZ_SUPPORT_SDSP" value="y" />
+  </KernelV2Config>
+  <KernelV2DebugConfig>
+    <config feature="CONFIG_MTK_GZ_SUPPORT_SDSP" value="y" />
+  </KernelV2DebugConfig>
+</GenieZoneConfig>

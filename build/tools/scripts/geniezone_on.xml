@@ -1,0 +1,72 @@
+<GenieZoneConfig>
+  <ProjectConfig>
+    <config feature="MTK_ENABLE_GENIEZONE" value="yes" />
+    <config feature="MTK_NEBULA_VM_SUPPORT" value="no" />
+  </ProjectConfig>
+  <TrustzoneConfig>
+    <config feature="MTK_ENABLE_GENIEZONE" value="yes" />
+  </TrustzoneConfig>
+  <LKConfig>
+    <config feature="MTK_ENABLE_GENIEZONE" value="yes" />
+  </LKConfig>
+  <PreloadConfig>
+    <config feature="MTK_ENABLE_GENIEZONE" value="yes" />
+    <config feature="MTK_NEBULA_VM_SUPPORT" value="no" />
+  </PreloadConfig>
+  <KernelConfig>
+    <config feature="CONFIG_MTK_ENABLE_GENIEZONE" value="y" />
+    <config feature="CONFIG_MTK_NEBULA_VM_SUPPORT" value="is not set" />
+  </KernelConfig>
+  <KernelDebugConfig>
+    <config feature="CONFIG_MTK_ENABLE_GENIEZONE" value="y" />
+    <config feature="CONFIG_MTK_NEBULA_VM_SUPPORT" value="is not set" />
+  </KernelDebugConfig>
+  <KernelV2Config>
+    <config feature="CONFIG_HAVE_MTK_ENABLE_GENIEZONE" value="y" />
+    <config feature="CONFIG_MTK_ENABLE_GENIEZONE" value="y" />
+    <config feature="CONFIG_MTK_GZ_MAIN" value="y" />
+    <config feature="CONFIG_MTK_GZ_VIRTIO" value="y" />
+    <config feature="CONFIG_MTK_GZ_VIRTIO_IPC" value="y" />
+    <config feature="CONFIG_MTK_GZ_IRQ" value="y" />
+    <config feature="CONFIG_HAVE_MTK_GZ_LOG" value="y" />
+    <config feature="CONFIG_MTK_GZ_LOG" value="y" />
+    <config feature="CONFIG_MTK_NEBULA_VM_SUPPORT" value="is not set" />
+  </KernelV2Config>
+  <KernelV2DebugConfig>
+    <config feature="CONFIG_HAVE_MTK_ENABLE_GENIEZONE" value="y" />
+    <config feature="CONFIG_MTK_ENABLE_GENIEZONE" value="y" />
+    <config feature="CONFIG_MTK_GZ_MAIN" value="y" />
+    <config feature="CONFIG_MTK_GZ_VIRTIO" value="y" />
+    <config feature="CONFIG_MTK_GZ_VIRTIO_IPC" value="y" />
+    <config feature="CONFIG_MTK_GZ_IRQ" value="y" />
+    <config feature="CONFIG_HAVE_MTK_GZ_LOG" value="y" />
+    <config feature="CONFIG_MTK_GZ_LOG" value="y" />
+    <config feature="CONFIG_MTK_NEBULA_VM_SUPPORT" value="is not set" />
+  </KernelV2DebugConfig>
+  <KernelV3Config>
+    <config feature="CONFIG_HAVE_MTK_ENABLE_GENIEZONE" value="y" />
+    <config feature="CONFIG_MTK_ENABLE_GENIEZONE" value="m" />
+    <config feature="CONFIG_MTK_GZ_MAIN" value="m" />
+    <config feature="CONFIG_MTK_GZ_VIRTIO" value="m" />
+    <config feature="CONFIG_MTK_GZ_VIRTIO_IPC" value="m" />
+    <config feature="CONFIG_MTK_GZ_IRQ" value="m" />
+    <config feature="CONFIG_HAVE_MTK_GZ_LOG" value="y" />
+    <config feature="CONFIG_MTK_GZ_LOG" value="m" />
+    <config feature="CONFIG_MTK_GZ_TZ_SYSTEM" value="m" />
+    <config feature="CONFIG_MTK_NEBULA_VM_SUPPORT" value="is not set" />
+  </KernelV3Config>
+  <KernelV3DebugConfig>
+    <config feature="CONFIG_HAVE_MTK_ENABLE_GENIEZONE" value="y" />
+    <config feature="CONFIG_MTK_ENABLE_GENIEZONE" value="m" />
+    <config feature="CONFIG_MTK_GZ_MAIN" value="m" />
+    <config feature="CONFIG_MTK_GZ_VIRTIO" value="m" />
+    <config feature="CONFIG_MTK_GZ_VIRTIO_IPC" value="m" />
+    <config feature="CONFIG_MTK_GZ_IRQ" value="m" />
+    <config feature="CONFIG_HAVE_MTK_GZ_LOG" value="y" />
+    <config feature="CONFIG_MTK_GZ_LOG" value="m" />
+    <config feature="CONFIG_MTK_GZ_TZ_SYSTEM" value="m" />
+    <config feature="CONFIG_MTK_NEBULA_VM_SUPPORT" value="is not set" />
+  </KernelV3DebugConfig>
+  <KernelV4DebugConfig>
+  </KernelV4DebugConfig>
+</GenieZoneConfig>

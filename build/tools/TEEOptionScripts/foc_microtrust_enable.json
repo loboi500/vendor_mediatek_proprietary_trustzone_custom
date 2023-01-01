@@ -1,0 +1,124 @@
+{
+    "Kernel_4_xx": {
+        "ProjectConfig": {
+            "CONFIG": "device/${COMPANY}/${PROJECT}/ProjectConfig.mk",
+            "OPTIONS": {
+                "MTK_ATF_SUPPORT": "yes",
+                "MTK_TEE_SUPPORT": "yes",
+                "MICROTRUST_TEE_SUPPORT": "yes",
+                "MTK_TEE_GP_SUPPORT": "yes",
+                "MTK_PERSIST_PARTITION_SUPPORT": "yes"
+            }
+        },
+        "preloader": {
+            "CONFIG": "vendor/mediatek/proprietary/bootable/bootloader/preloader/custom/${PROJECT}/${PROJECT}.mk",
+            "OPTIONS": {
+                "MTK_TEE_SUPPORT": "yes",
+                "MICROTRUST_TEE_SUPPORT": "yes"
+            },
+            "EXPORT": {
+                "MTK_TEE_SUPPORT": "",
+                "MICROTRUST_TEE_SUPPORT": ""
+            }
+        },
+        "trustzone": {
+            "CONFIG": "vendor/mediatek/proprietary/trustzone/custom/build/project/${PROJECT}.mk",
+            "OPTIONS": {
+                "MTK_ATF_SUPPORT": "yes",
+                "MTK_TEE_SUPPORT": "yes",
+                "MICROTRUST_TEE_SUPPORT": "yes"
+            },
+            "Description1": "Here is Special handling: MTK_TEE_DRAM_SIZE is not a FIXED value! and MUST be only one OPTION in DRAMSIZEOPTIONS node!",
+            "Description2": "if OPTION already exist in CONFIG file, we do not change the value when check, and just give a Warning tips;",
+            "Description3": "if OPTION not exist in CONFIG file, we will add it by using DRAMSIZECONTENT on need.",
+            "DRAMSIZEOPTIONS": {
+                "MTK_TEE_DRAM_SIZE": "### Warning: Depend on TEE Features and Modules, please set it manually. ####\n"
+            },
+            "DRAMSIZECONTENT": "#### Warning: Depends on TEE Features and Modules, please set it manually. ####\nMTK_TEE_DRAM_SIZE=0x3200000\n"
+        },
+        "kernel-debug": {
+            "CONFIG": "${KERNEL}/arch/${ARCH}/configs/${PROJECT}_debug_defconfig",
+            "OPTIONS": {
+                "CONFIG_TEE": "y",
+                "CONFIG_MICROTRUST_TEE_SUPPORT": "y",
+                "CONFIG_MTK_TEE_GP_SUPPORT": "y"
+            }
+        },
+        "kernel": {
+            "CONFIG": "${KERNEL}/arch/${ARCH}/configs/${PROJECT}_defconfig",
+            "OPTIONS": {
+                "CONFIG_TEE": "y",
+                "CONFIG_MICROTRUST_TEE_SUPPORT": "y",
+                "CONFIG_MTK_TEE_GP_SUPPORT": "y"
+            }
+        }
+    },
+    "Kernel_5_xx": {
+        "ProjectConfig": {
+            "CONFIG": "device/${COMPANY}/${PROJECT}/ProjectConfig.mk",
+            "OPTIONS": {
+                "MTK_TEE_SUPPORT": "yes",
+                "MICROTRUST_TEE_SUPPORT": "yes",
+                "MTK_TEE_GP_SUPPORT": "yes",
+                "MTK_PERSIST_PARTITION_SUPPORT": "yes"
+            }
+        },
+        "Device-vext": {
+            "CONFIG": "device/${COMPANY}/${PROJECT}/device-vext.mk",
+            "OPTIONS": {
+                "MICROTRUST_TEE_VERSION": "450"
+            }
+        },
+        "Device": {
+            "CONFIG": "device/mediatek/vendor/${VENDOR_PROJECT}/device.mk",
+            "OPTIONS": {
+                "MICROTRUST_TEE_VERSION": "450"
+            }
+        },
+        "VendorConfig": {
+            "CONFIG": "device/mediatek/vendor/${VENDOR_PROJECT}/VendorConfig.mk",
+            "OPTIONS": {
+                "MTK_TEE_SUPPORT": "yes",
+                "MICROTRUST_TEE_SUPPORT": "yes"
+            }
+        },
+        "kernel": {
+            "CONFIG": "${KERNEL}/arch/${ARCH}/configs/${KERNEL_PROJECT}_defconfig",
+            "OPTIONS": {
+                "CONFIG_TEE": "m",
+                "CONFIG_MICROTRUST_TEE_SUPPORT": "m",
+                "CONFIG_MTK_TEE_GP_SUPPORT": "y"
+            }
+        },
+        "dts": {
+            "CONFIG": "${KERNEL}/arch/${ARCH}/boot/dts/mediatek/${PROJECT}.dts",
+            "Description1": "Here is Special handling: MUST be only one OPTION in OPTIONS node!",
+            "Description2": "if OPTION already exist in CONFIG file, it is appropriate to check and change;",
+            "Description3": "if OPTION not exist in CONFIG file, we will add it by using CONTENT on need.",
+            "OPTIONS": {
+                "microtrust,real-drv": "<1>;"
+            },
+            "CONTENT": "\/* Microtrust(TEEI) utos real driver *\/\n&utos{\n\tmicrotrust,real-drv = <1>;\n};\n\n"
+        },
+        "tfa": {
+            "CONFIG": "vendor/mediatek/proprietary/trustzone/${TFA}/plat/mediatek/project/${PROJECT}/project_config.mk",
+            "Description1": "Here is Special handling: MUST be only one OPTION in OPTIONS node!",
+            "Description2": "if OPTION already exist in CONFIG file, it is appropriate to check and change;",
+            "Description3": "if OPTION not exist in CONFIG file, we will add it by using CONTENT on need.",
+            "OPTIONS": {
+                "SPD": "teeid"
+            },
+            "CONTENT": "SPD := teeid"
+        },
+        "lk": {
+            "CONFIG": "vendor/mediatek/proprietary/bootable/bootloader/${LK}/project/${PROJECT}.mk",
+            "Description1": "Here is Special handling: MTK_TEE_DRAM_SIZE is not a FIXED value! and MUST be only one OPTION in OPTIONS node!",
+            "Description2": "if OPTION already exist in CONFIG file, we do not change the value when check, and just give a Warning tips;",
+            "Description3": "if OPTION not exist in CONFIG file, we will add it by using CONTENT on need.",
+            "OPTIONS": {
+                "MTK_TEE_DRAM_SIZE": "### Warning: Depend on TEE Features and Modules, please set it manually. ####\n"
+            },
+            "CONTENT": "#### Warning: Depends on TEE Features and Modules, please set it manually. ####\nMTK_TEE_DRAM_SIZE=0x3200000\n"
+        }
+    }
+}

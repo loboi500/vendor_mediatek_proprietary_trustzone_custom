@@ -1,0 +1,39 @@
+<TeeConfig>
+  <ProjectConfig>
+    <config feature="MTK_ATF_SUPPORT" value="yes" />
+    <config feature="MTK_TEE_SUPPORT" value="yes" />
+    <config feature="TRUSTONIC_TEE_SUPPORT" value="yes" />
+  </ProjectConfig>
+  <TrustzoneConfig>
+    <config feature="MTK_ATF_SUPPORT" value="yes" />
+    <config feature="MTK_TEE_SUPPORT" value="yes" />
+    <config feature="TRUSTONIC_TEE_SUPPORT" value="yes" />
+    <config feature="MTK_TEE_DRAM_SIZE" value="0x1740000" />
+  </TrustzoneConfig>
+  <LKConfig>
+    <config feature="TRUSTONIC_TEE_SUPPORT" value="yes" />
+  </LKConfig>
+  <PreloadConfig>
+    <config feature="MTK_TEE_SUPPORT" value="yes" />
+    <config feature="TRUSTONIC_TEE_SUPPORT" value="yes" />
+  </PreloadConfig>
+  <KernelConfig>
+    <config feature="CONFIG_TEE" value="y" />
+    <config feature="CONFIG_TRUSTONIC_TEE_SUPPORT" value="y" />
+  </KernelConfig>
+  <KernelDebugConfig>
+    <config feature="CONFIG_TEE" value="y" />
+    <config feature="CONFIG_TRUSTONIC_TEE_SUPPORT" value="y" />
+  </KernelDebugConfig>
+  <KernelV1Config>
+    <config feature="CONFIG_TEE" value="m" />
+    <config feature="CONFIG_TRUSTONIC_TEE_SUPPORT" value="m" />
+  </KernelV1Config>
+  <KernelV1DebugConfig>/>
+    <config feature="CONFIG_TEE" value="m" />
+    <config feature="CONFIG_TRUSTONIC_TEE_SUPPORT" value="m" />
+  </KernelV1DebugConfig>
+  <DeviceConfig>
+    <config feature="TRUSTONIC_TEE_VERSION" value="500" />
+  </DeviceConfig>
+</TeeConfig>

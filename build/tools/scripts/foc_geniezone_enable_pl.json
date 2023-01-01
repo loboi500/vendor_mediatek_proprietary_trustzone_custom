@@ -1,0 +1,140 @@
+{
+    "android-base": {
+        "CONFIG": "device/mediateksample/${PROJECT}/ProjectConfig.mk",
+        "OPTIONS": {
+            "MTK_ENABLE_GENIEZONE": "yes",
+            "MTK_NEBULA_VM_SUPPORT": "no"
+        }
+    },
+    "android": {
+        "CONFIG": "device/mediatekprojects/${PROJECT}/ProjectConfig.mk",
+        "OPTIONS": {
+            "MTK_ENABLE_GENIEZONE": "yes",
+            "MTK_NEBULA_VM_SUPPORT": "no"
+        }
+    },
+    "preloader": {
+        "CONFIG": "vendor/mediatek/proprietary/bootable/bootloader/preloader/custom/${PROJECT}/${PROJECT}.mk",
+        "OPTIONS": {
+            "HAVE_MTK_GENIEZONE": "yes",
+            "MTK_ENABLE_GENIEZONE": "yes",
+            "KEEP_BOOTING_ON_GZ_NOT_EXIST": "no",
+            "MTK_NEBULA_VM_SUPPORT": "no"
+        }
+    },
+    "lk": {
+        "CONFIG": "vendor/mediatek/proprietary/bootable/bootloader/lk/project/${PROJECT}.mk",
+        "OPTIONS": {
+            "MTK_ENABLE_GENIEZONE": "yes"
+        }
+    },
+    "trustzone": {
+        "CONFIG": "vendor/mediatek/proprietary/trustzone/custom/build/project/${PROJECT}.mk",
+        "OPTIONS": {
+            "MTK_ENABLE_GENIEZONE": "yes"
+        }
+    },
+    "kernel-debug-v4": {
+        "CONFIG": "${KERNEL}/arch/${ARCH}/configs/mgk_64_k510_defconfig",
+        "OPTIONS": {
+            "CONFIG_HAVE_MTK_ENABLE_GENIEZONE": "y",
+            "CONFIG_MTK_ENABLE_GENIEZONE": "m",
+            "CONFIG_MTK_GZ_MAIN": "m",
+            "CONFIG_MTK_GZ_VIRTIO": "m",
+            "CONFIG_MTK_GZ_VIRTIO_IPC": "m",
+            "CONFIG_MTK_GZ_IRQ": "m",
+            "CONFIG_HAVE_MTK_GZ_LOG": "y",
+            "CONFIG_MTK_GZ_LOG": "m",
+            "CONFIG_MTK_GZ_TZ_SYSTEM": "m",
+            "CONFIG_MTK_NEBULA_VM_SUPPORT": "is not set"
+        }
+    },
+    "kernel-debug-v3": {
+        "CONFIG": "${KERNEL}/arch/${ARCH}/configs/${PROJECT}_debug_defconfig",
+        "OPTIONS": {
+            "CONFIG_HAVE_MTK_ENABLE_GENIEZONE": "y",
+            "CONFIG_MTK_ENABLE_GENIEZONE": "m",
+            "CONFIG_MTK_GZ_MAIN": "m",
+            "CONFIG_MTK_GZ_VIRTIO": "m",
+            "CONFIG_MTK_GZ_VIRTIO_IPC": "m",
+            "CONFIG_MTK_GZ_IRQ": "m",
+            "CONFIG_HAVE_MTK_GZ_LOG": "y",
+            "CONFIG_MTK_GZ_LOG": "m",
+            "CONFIG_MTK_GZ_TZ_SYSTEM": "m",
+            "CONFIG_MTK_NEBULA_VM_SUPPORT": "is not set"
+        }
+    },
+    "kernel-debug-v2": {
+        "CONFIG": "${KERNEL}/arch/${ARCH}/configs/${PROJECT}_debug_defconfig",
+        "OPTIONS": {
+            "CONFIG_HAVE_MTK_ENABLE_GENIEZONE": "y",
+            "CONFIG_MTK_ENABLE_GENIEZONE": "y",
+            "CONFIG_MTK_GZ_MAIN": "y",
+            "CONFIG_MTK_GZ_VIRTIO": "y",
+            "CONFIG_MTK_GZ_VIRTIO_IPC": "y",
+            "CONFIG_MTK_GZ_IRQ": "y",
+            "CONFIG_HAVE_MTK_GZ_LOG": "y",
+            "CONFIG_MTK_GZ_LOG": "y",
+            "CONFIG_MTK_NEBULA_VM_SUPPORT": "is not set"
+        }
+    },
+    "kernel-debug-v1": {
+        "CONFIG": "${KERNEL}/arch/${ARCH}/configs/${PROJECT}_debug_defconfig",
+        "OPTIONS": {
+            "CONFIG_MTK_ENABLE_GENIEZONE": "y",
+            "CONFIG_MTK_NEBULA_VM_SUPPORT": "is not set"
+        }
+    },
+    "kernel-v4": {
+        "CONFIG": "${KERNEL}/arch/${ARCH}/configs/mgk_64_k510_defconfig",
+        "OPTIONS": {
+            "CONFIG_HAVE_MTK_ENABLE_GENIEZONE": "y",
+            "CONFIG_MTK_ENABLE_GENIEZONE": "m",
+            "CONFIG_MTK_GZ_MAIN": "m",
+            "CONFIG_MTK_GZ_VIRTIO": "m",
+            "CONFIG_MTK_GZ_VIRTIO_IPC": "m",
+            "CONFIG_MTK_GZ_IRQ": "m",
+            "CONFIG_HAVE_MTK_GZ_LOG": "y",
+            "CONFIG_MTK_GZ_LOG": "m",
+            "CONFIG_MTK_GZ_TZ_SYSTEM": "m",
+            "CONFIG_MTK_NEBULA_VM_SUPPORT": "is not set"
+        }
+    },
+    "kernel-v3": {
+        "CONFIG": "${KERNEL}/arch/${ARCH}/configs/${PROJECT}_defconfig",
+        "OPTIONS": {
+            "CONFIG_HAVE_MTK_ENABLE_GENIEZONE": "y",
+            "CONFIG_MTK_ENABLE_GENIEZONE": "m",
+            "CONFIG_MTK_GZ_MAIN": "m",
+            "CONFIG_MTK_GZ_VIRTIO": "m",
+            "CONFIG_MTK_GZ_VIRTIO_IPC": "m",
+            "CONFIG_MTK_GZ_IRQ": "m",
+            "CONFIG_HAVE_MTK_GZ_LOG": "y",
+            "CONFIG_MTK_GZ_LOG": "m",
+            "CONFIG_MTK_GZ_TZ_SYSTEM": "m",
+            "CONFIG_MTK_NEBULA_VM_SUPPORT": "is not set"
+        }
+    },
+    "kernel-v2": {
+        "CONFIG": "${KERNEL}/arch/${ARCH}/configs/${PROJECT}_defconfig",
+        "OPTIONS": {
+            "CONFIG_HAVE_MTK_ENABLE_GENIEZONE": "y",
+            "CONFIG_MTK_ENABLE_GENIEZONE": "y",
+            "CONFIG_MTK_GZ_MAIN": "y",
+            "CONFIG_MTK_GZ_VIRTIO": "y",
+            "CONFIG_MTK_GZ_VIRTIO_IPC": "y",
+            "CONFIG_MTK_GZ_IRQ": "y",
+            "CONFIG_HAVE_MTK_GZ_LOG": "y",
+            "CONFIG_MTK_GZ_LOG": "y",
+            "CONFIG_MTK_NEBULA_VM_SUPPORT": "is not set"
+        }
+    },
+    "kernel-v1": {
+        "CONFIG": "${KERNEL}/arch/${ARCH}/configs/${PROJECT}_defconfig",
+        "OPTIONS": {
+            "CONFIG_MTK_ENABLE_GENIEZONE": "y",
+            "CONFIG_MTK_NEBULA_VM_SUPPORT": "is not set"
+        }
+    }
+}
+

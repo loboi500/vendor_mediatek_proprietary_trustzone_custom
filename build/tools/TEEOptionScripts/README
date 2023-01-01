@@ -1,0 +1,44 @@
+***********************************************************************************************
+Notice: 
+TEEOptionScripts need to be here: vendor/mediatek/proprietary/trustzone/custom/build/tools/
+***********************************************************************************************
+
+***********************************************************************************************
+Supported Platform:
+Android S <kernel-4.14, kernel-4.19, kernel-5.10>: 
+mt6833, mt6873, mt6789, mt6895, mt6983...
+Android T <kernel-5.10, kernel-5.15>: 
+mt6985...
+***********************************************************************************************
+
+===============================================================================================
+Script : checkTEE.py
+This is a script used to check TEE options enable/disable in MediaTek platform.
+===============================================================================================
+
+Usage:
+1. [...]$ cd vendor/mediatek/proprietary/trustzone/custom/build/tools/TEEOptionScripts/
+2. [...]$ ./checkTEE.py --project=$(PROJECT) foc_trustonic_enable.json
+
+Example:
+1. [...]$ cd vendor/mediatek/proprietary/trustzone/custom/build/tools/TEEOptionScripts/
+2. check k6789v1_64 with foc_trustonic_enable.json:
+   [...]$ ./checkTEE.py --project=k6789v1_64 foc_trustonic_enable.json
+
+
+===============================================================================================
+Script : setTEE.py
+This is a script used to enable/disable TEE options in MediaTek platform.
+===============================================================================================
+
+Usage:
+1. [...]$ cd vendor/mediatek/proprietary/trustzone/custom/build/tools/TEEOptionScripts/
+2. [...]$ ./setTEE.py --project=$(PROJECT) [foc_xxx.json]
+   [...]$ ./setTEE.py --project=$(PROJECT) [foc_xxx.json]
+
+Example:
+1. [...]$ cd vendor/mediatek/proprietary/trustzone/custom/build/tools/TEEOptionScripts/
+2. <enable trustonic tee>: k6789v1_64 with foc_trustonic_enable.json: 
+   [...]$ ./setTEE.py --project=k6789v1_64 foc_trustonic_enable.json
+   <disable trustonic tee>: k6789v1_64 with foc_trustonic_disable.json: 
+   [...]$ ./setTEE.py --project=k6789v1_64 foc_trustonic_disable.json
